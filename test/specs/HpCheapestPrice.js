@@ -4,10 +4,7 @@ describe("Dell Cheapest Price in Flipkart", async()=>{
     await browser.url("https://www.flipkart.com/")
     await $(".Pke_EE").setValue("Dell Laptop")
     await $("svg[width='24']").click()
-    //await $("//div[@class='suthUA']//select[@class='Gn+jFg']").click()
-    //const elem = await $("div[class='suthUA'] option[value='20000']")
-    //await browser.waitUntil(async()=>expect($("div[class='suthUA'] option[value='20000']")).toBeDisplayed())
-    //await $("div[class='suthUA'] option[value='20000']").click();
+ 
     await $("//div[normalize-space()='Price -- Low to High']").waitForDisplayed({ timeout: 3000 });
     
     await $("//div[normalize-space()='Price -- Low to High']").click()
